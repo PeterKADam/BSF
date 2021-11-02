@@ -82,6 +82,9 @@ scene F7, store
 sel interactions, (resi 172 and chain A) and (resi 1 and chain B)
 show_as sticks, interactions
 
+#show sticks, byres, around resi 166, 5
+#ish
+
 set_view (\
     -0.185820580,   -0.636153400,   -0.748833537,\
      0.974415779,   -0.021374283,   -0.223627999,\
