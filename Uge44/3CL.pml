@@ -15,7 +15,7 @@ sel D1, resi 1:98
 deselect
 
 color americium, D1
-color Bismuth, D2
+color bismuth, D2
 color calcium, D3
 
 set_view (\
@@ -30,10 +30,10 @@ scene F1, store
 spectrum count, rainbow, 6yb7_0001, byres=1
 scene F3, store
 
-sel active_site, resi 166+145+41
+sel active_site_A, resi 166+145+41 and chain A
 
-show_as sticks, active_site
-color atomic, active_site
+show_as sticks, active_site_A
+color atomic, active_site_A
 
 set_view (\
      0.852409005,   -0.025014825,   -0.522276163,\
@@ -63,3 +63,35 @@ set_view (\
    225.155654907,  310.927551270,  -20.000000000 )
 
 scene F6, store
+sel active_site_B, resi 166+145+41 and chain B
+
+
+show_as sticks, active_site_B + active_site_A
+color atomic, active_site_B + active_site_A
+
+set_view (\
+    -0.586302042,    0.587266922,    0.558001876,\
+     0.574497998,    0.787044227,   -0.224691987,\
+    -0.571132123,    0.188841671,   -0.798837304,\
+     0.000123665,    0.000155739, -268.039855957,\
+   -12.330641747,   -7.144522667,   -1.953126073,\
+   225.155654907,  310.927551270,  -20.000000000 )
+
+scene F7, store
+
+sel interactions, (resi 172 and chain A) and (resi 1 and chain B)
+show_as sticks, interactions
+
+#show sticks, byres, around resi 166, 5
+#ish
+
+set_view (\
+    -0.185820580,   -0.636153400,   -0.748833537,\
+     0.974415779,   -0.021374283,   -0.223627999,\
+     0.126259893,   -0.771257460,    0.623863041,\
+    -0.000272819,    0.000206937,  -34.290950775,\
+     6.785839081,    4.673930168,   17.306854248,\
+    13.317678452,   55.256000519,  -20.000000000 )
+scene F8, store
+
+
