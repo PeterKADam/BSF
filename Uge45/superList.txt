@@ -1,0 +1,12 @@
+from pymol import cmd;
+def superList():
+  list = cmd.get_names("objects")
+  y = list[0]
+  for x in list:
+    if x != y:
+      sel=x+" and (name N+C+O+CA)"
+      print (sel)
+      test=cmd.super(sel,y,3.0)
+      print (test[0])
+cmd.extend ("superList",superList);
+
