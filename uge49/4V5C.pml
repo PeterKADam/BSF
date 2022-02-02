@@ -8,7 +8,8 @@ enable 70S
 
 scene F1, store
 
-sel RNA, ///BA+BB+AA+AY+AV
+sel RNA, ///BA+BB+AA+AY+AV+AW
+sel fakeRNA ///AY+AV+AW
 show_as ribbon, 70S and not RNA
 
 color blue, ///A*
